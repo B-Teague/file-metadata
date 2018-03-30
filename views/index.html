@@ -1,0 +1,46 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teague APIs - File Metadata</title>
+    <meta name="description" content="A microservice rest API returning a JSON object of an image search result">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Teague APIs - File Metadata
+      </h1>
+    </header>
+
+    <main>
+      <blockquote>
+        <h2>
+          User Stories
+        </h2>
+        <ol>
+          <li>I can submit a FormData object that includes a file upload.</li>
+          <li>When I submit something, I will receive the file size in bytes within the JSON response</li>
+        </ol>
+      </blockquote>
+      <p>
+        Upload a file to view its file size.
+      </p>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="testFile" />
+        <input type="submit" value="Submit"/>
+      </form>
+    </main>
+  </body>
+</html>
