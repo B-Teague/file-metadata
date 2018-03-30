@@ -4,8 +4,9 @@
 // init project
 var express = require('express');
 var multer = require('multer');
+var storage = multer.memoryStorage();
 var app = express();
-var upload = multer({ dest: './tmp' });
+var upload = multer({ storage: storage });
 //var storage = multer.memoryStorage();
 //var upload = multer({ storage: storage });
 
