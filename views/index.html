@@ -1,12 +1,3 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,23 +15,26 @@
       </h1>
     </header>
 
-    <main>
-      <blockquote>
+    <article>
+      <section>
         <h2>
           User Stories
         </h2>
         <ol>
-          <li>I can submit a FormData object that includes a file upload.</li>
-          <li>When I submit something, I will receive the file size in bytes within the JSON response</li>
+          <li>I can submit a form object that includes a file upload.</li>
+          <li>The from file input field has the "name" attribute set to "upfile". We rely on this in testing.</li>
+          <li>When I submit something, I will receive the file name, and size in bytes within the JSON response.</li>
         </ol>
-      </blockquote>
-      <p>
+      </section>
+      <section>
+        <p>
         Upload a file to view its file size.
       </p>
       <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="testFile" />
+        <input type="file" name="upfile" />
         <input type="submit" value="Submit"/>
       </form>
-    </main>
+      </section>
+    </article>
   </body>
 </html>
